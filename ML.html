@@ -1109,51 +1109,36 @@ MathJax.Hub.Config({
 <h3 id="l1-regression"><a name="user-content-l1-regression" href="#l1-regression" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>L1  Regression</h3>
 <ol>
 <li>Step 1 选一个model  </li>
-<li>Step 2 判断function的好坏<ul>
-<li>应用Loss Function<br />
-<img alt="a" src="http://or2urvelu.bkt.clouddn.com/L1_1.png" /></li>
+<li>Step 2 判断function的好坏   <ul>
+<li>应用Loss Function  </li>
 </ul>
 </li>
 <li>
-<p>Step 3 选择Best Function<br />
-<img alt="a" src="http://or2urvelu.bkt.clouddn.com/L1_2.png" />  </p>
+<p>Step 3 选择Best Function  </p>
 <ul>
-<li>Gradient Descent,在凸函数中不存在local minimum<br />
-<img alt="a" src="http://or2urvelu.bkt.clouddn.com/L1_3.png" />  </li>
-<li>两个参数的Gradient Descent<br />
-<img alt="a" src="http://or2urvelu.bkt.clouddn.com/L1_04.png" />  </li>
+<li>Gradient Descent,在凸函数中不存在local minimum  </li>
 </ul>
 </li>
 <li>
-<p>过拟合</p>
+<p>过拟合  </p>
 <ul>
-<li>过拟合产生可以更换合适的模型<br />
-<img alt="a" src="http://or2urvelu.bkt.clouddn.com/L1_5.png" />  </li>
-<li>也可以增加正则项，<img alt="equation" src="http://latex.codecogs.com/gif.latex?$W_i$" />越小则函数越平滑，b和平滑程度无关<br />
-<img alt="a" src="http://or2urvelu.bkt.clouddn.com/L1_6.png" />  </li>
-<li><img alt="equation" src="http://latex.codecogs.com/gif.latex?$\lambda$" />的大小决定了平滑的程度<br />
-<img alt="a" src="http://or2urvelu.bkt.clouddn.com/L1_7.png" />  </li>
+<li>过拟合产生可以更换合适的模型    </li>
+<li>也可以增加正则项，<img alt="equation" src="http://latex.codecogs.com/gif.latex?$W_i$" />越小则函数越平滑，b和平滑程度无关</li>
+<li><img alt="equation" src="http://latex.codecogs.com/gif.latex?$\lambda$" />的大小决定了平滑的程度  </li>
 </ul>
 </li>
 </ol>
 <h3 id="l2-error"><a name="user-content-l2-error" href="#l2-error" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>L2  Error</h3>
 <ol>
-<li>Error来自哪，来自bias和variance<br />
-<img alt="a" src="http://or2urvelu.bkt.clouddn.com/L2_1.png" />  <ul>
-<li>bias和variance的解释<br />
-<img alt="a" src="http://or2urvelu.bkt.clouddn.com/L2_2.png" />  </li>
+<li>Error来自哪，来自bias和variance <ul>
 <li>简单的模型bias可能会大，复杂的模型variance可能会大<br />
-黑线表示正确的function，蓝线表示5000次平均的function<br />
-<img alt="a" src="http://or2urvelu.bkt.clouddn.com/L2_3.png" />  </li>
+黑线表示正确的function，蓝线表示5000次平均的function  </li>
 </ul>
 </li>
-<li>bias大应该更换更复杂的模型<br />
-<img alt="a" src="http://or2urvelu.bkt.clouddn.com/L2_4.png" />  </li>
+<li>bias大应该更换更复杂的模型 </li>
 <li>variance大应该增加数据或者增加正则项<br />
-    增加正则项可能会伤害到bias,应该调节合适的<br />
-<img alt="a" src="http://or2urvelu.bkt.clouddn.com/L2_5.png" />  </li>
-<li>挑选model时可以设计validation set<br />
-<img alt="a" src="http://or2urvelu.bkt.clouddn.com/L2_6.png" />  </li>
+    增加正则项可能会伤害到bias,应该调节合适的 </li>
+<li>挑选model时可以设计validation set  </li>
 </ol>
 <h3 id="l3-gradient-descent"><a name="user-content-l3-gradient-descent" href="#l3-gradient-descent" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>L3 Gradient Descent</h3>
 <ol>
@@ -1162,18 +1147,31 @@ MathJax.Hub.Config({
 <ul>
 <li>
 <p>learning rates是指<img alt="equation" src="http://latex.codecogs.com/gif.latex?$\eta$" />可以看做是梯度下降的步伐<br />
-应该画出不同<img alt="equation" src="http://latex.codecogs.com/gif.latex?$\eta$" />下Loss对于parameter的函数对比不同<img alt="equation" src="http://latex.codecogs.com/gif.latex?$\eta$" />的效果<br />
-<img alt="a" src="http://or2urvelu.bkt.clouddn.com/L3_0.png" />  </p>
+应该画出不同<img alt="equation" src="http://latex.codecogs.com/gif.latex?$\eta$" />下Loss对于parameter的函数对比不同<img alt="equation" src="http://latex.codecogs.com/gif.latex?$\eta$" />的效果  </p>
 </li>
 <li>
-<p>Adaptive Learning Rates &ndash;&gt; Adagrad  </p>
+<p>Adaptive Learning Rates &ndash;&gt; Adagrad，learning rate 逐步下降 <br />
+用<img alt="equation" src="http://latex.codecogs.com/gif.latex?$g^t$" />表示一次微分，用分母近似表示二次微分，如下图<br />
+<img alt="a" src="http://or2urvelu.bkt.clouddn.com/L3-1.png" /><br />
+2. Tip 2: Stochastic Gradient Descent  </p>
 </li>
+<li>得到一个example就updata一次参数  </li>
+<li>feature scaling，让不同变量分布趋近相同，更新参数更有效率  </li>
 </ul>
 </li>
 </ol>
-<p><img alt="a" src="http://or2urvelu.bkt.clouddn.com/L3_1.png" /></p>
-<p><img alt="a" src="http://or2urvelu.bkt.clouddn.com/L3_1.png" /></p>
-<p><img alt="a" src="http://or2urvelu.bkt.clouddn.com/L3_2.png" /> </p>
+<h3 id="l4-classification"><a name="user-content-l4-classification" href="#l4-classification" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>L4 Classification</h3>
+<ul>
+<li>设类别服从高斯分布<br />
+<img alt="a" src="http://or2urvelu.bkt.clouddn.com/L4-1.png" /> </li>
+</ul>
+<h3 id="l5-logistic-regression"><a name="user-content-l5-logistic-regression" href="#l5-logistic-regression" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>L5 Logistic Regression</h3>
+<ul>
+<li>对比logistic和linear，Step2中，L(f)是两项的cross entropy(交叉熵)<br />
+<img alt="a" src="http://or2urvelu.bkt.clouddn.com/L5-1.png" />  </li>
+<li>Generative model对比Disciminative model<br />
+Generative有一个原始模型的假设，Disciminative在数据量大情况下可能表现更好  </li>
+</ul>
 <h3 id="l6"><a name="user-content-l6" href="#l6" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>L6</h3>
 <ul>
 <li>neural network中，所有的weight和bias集合起来是parameter，用<img alt="equation" src="http://latex.codecogs.com/gif.latex?$\theta$" />表示</li>
