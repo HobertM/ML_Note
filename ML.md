@@ -23,12 +23,13 @@
 ### L3 Gradient Descent
 1. Tip 1: Tuning your learning rates  
 
-	- learning rates是指![equation](http://latex.codecogs.com/gif.latex?$\eta$)可以看做是梯度下降的步伐
-应该画出不同![equation](http://latex.codecogs.com/gif.latex?$\eta$)下Loss对于parameter的函数对比不同![equation](http://latex.codecogs.com/gif.latex?$\eta$)的效果  
+	- learning rates是指![equation](http://latex.codecogs.com/gif.latex?$\eta$)，可以看做是梯度下降的步伐
+应该画出不同![equation](http://latex.codecogs.com/gif.latex?$\eta$)下Loss对于parameter的函数，对比不同![equation](http://latex.codecogs.com/gif.latex?$\eta$)的效果  
 
     - Adaptive Learning Rates --> Adagrad，learning rate 逐步下降 
     用![equation](http://latex.codecogs.com/gif.latex?$g^t$)表示一次微分，用分母近似表示二次微分，如下图
     ![a](http://or2urvelu.bkt.clouddn.com/L3-1.png)  
+
 2. Tip 2: Stochastic Gradient Descent  
     - 得到一个example就updata一次参数  
     - feature scaling，让不同变量分布趋近相同，更新参数更有效率  
@@ -38,7 +39,7 @@
  ![a](http://or2urvelu.bkt.clouddn.com/L4-1.png) 
 
 ### L5 Logistic Regression  
-- 对比logistic和linear，Step2中，L(f)是两项的cross entropy(交叉熵)  
+- 对比logistic和linear，Step2中，L(f)是两项的cross entropy(交叉熵)再求和  
 ![a](http://or2urvelu.bkt.clouddn.com/L5-1.png)  
 - Generative model对比Disciminative model  
 Generative有一个原始模型的假设，Disciminative在数据量大情况下可能表现更好  
@@ -50,7 +51,11 @@ Generative有一个原始模型的假设，Disciminative在数据量大情况下
 ![a](http://or2urvelu.bkt.clouddn.com/L6-01.png)  
 
 ### L7 Backpropagation  
-1. Forward pass
-
+1. Forward Pass  
+![a](http://or2urvelu.bkt.clouddn.com/L7-1.png)  
+2. Backward Pass  
+![a](http://or2urvelu.bkt.clouddn.com/L7-2.png)  
+3. 最后把结果相乘得到对该参数的偏导
 	
+### L8 Keras  
 

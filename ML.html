@@ -1146,15 +1146,19 @@ MathJax.Hub.Config({
 <p>Tip 1: Tuning your learning rates  </p>
 <ul>
 <li>
-<p>learning rates是指<img alt="equation" src="http://latex.codecogs.com/gif.latex?$\eta$" />可以看做是梯度下降的步伐<br />
-应该画出不同<img alt="equation" src="http://latex.codecogs.com/gif.latex?$\eta$" />下Loss对于parameter的函数对比不同<img alt="equation" src="http://latex.codecogs.com/gif.latex?$\eta$" />的效果  </p>
+<p>learning rates是指<img alt="equation" src="http://latex.codecogs.com/gif.latex?$\eta$" />，可以看做是梯度下降的步伐<br />
+应该画出不同<img alt="equation" src="http://latex.codecogs.com/gif.latex?$\eta$" />下Loss对于parameter的函数，对比不同<img alt="equation" src="http://latex.codecogs.com/gif.latex?$\eta$" />的效果  </p>
 </li>
 <li>
 <p>Adaptive Learning Rates &ndash;&gt; Adagrad，learning rate 逐步下降 <br />
 用<img alt="equation" src="http://latex.codecogs.com/gif.latex?$g^t$" />表示一次微分，用分母近似表示二次微分，如下图<br />
-<img alt="a" src="http://or2urvelu.bkt.clouddn.com/L3-1.png" /><br />
-2. Tip 2: Stochastic Gradient Descent  </p>
+<img alt="a" src="http://or2urvelu.bkt.clouddn.com/L3-1.png" />  </p>
 </li>
+</ul>
+</li>
+<li>
+<p>Tip 2: Stochastic Gradient Descent  </p>
+<ul>
 <li>得到一个example就updata一次参数  </li>
 <li>feature scaling，让不同变量分布趋近相同，更新参数更有效率  </li>
 </ul>
@@ -1167,7 +1171,7 @@ MathJax.Hub.Config({
 </ul>
 <h3 id="l5-logistic-regression"><a name="user-content-l5-logistic-regression" href="#l5-logistic-regression" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>L5 Logistic Regression</h3>
 <ul>
-<li>对比logistic和linear，Step2中，L(f)是两项的cross entropy(交叉熵)<br />
+<li>对比logistic和linear，Step2中，L(f)是两项的cross entropy(交叉熵)再求和<br />
 <img alt="a" src="http://or2urvelu.bkt.clouddn.com/L5-1.png" />  </li>
 <li>Generative model对比Disciminative model<br />
 Generative有一个原始模型的假设，Disciminative在数据量大情况下可能表现更好  </li>
@@ -1181,5 +1185,10 @@ Generative有一个原始模型的假设，Disciminative在数据量大情况下
 </ul>
 <h3 id="l7-backpropagation"><a name="user-content-l7-backpropagation" href="#l7-backpropagation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>L7 Backpropagation</h3>
 <ol>
-<li>Forward pass</li>
-</ol></article></body></html>
+<li>Forward Pass<br />
+<img alt="a" src="http://or2urvelu.bkt.clouddn.com/L7-1.png" />  </li>
+<li>Backward Pass<br />
+<img alt="a" src="http://or2urvelu.bkt.clouddn.com/L7-2.png" />  </li>
+<li>最后把结果相乘得到对该参数的偏导</li>
+</ol>
+<h3 id="l8-keras"><a name="user-content-l8-keras" href="#l8-keras" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>L8 Keras</h3></article></body></html>
