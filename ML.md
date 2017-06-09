@@ -43,23 +43,14 @@
 - Generative model对比Disciminative model  
 Generative有一个原始模型的假设，Disciminative在数据量大情况下可能表现更好  
 
-
-
-
-
-
-
-
-
 ### L6 
 - neural network中，所有的weight和bias集合起来是parameter，用![equation](http://latex.codecogs.com/gif.latex?$\theta$)表示
+- 最后一层是Output Layer一般加上softmax
+- 每次的结果都和真实值做cross entropy，然后用Gradient Descent找更好的参数  
+![a](http://or2urvelu.bkt.clouddn.com/L6-01.png)  
 
-
-
-
-
-
-
+### L7 Backpropagation  
+1. Forward pass
 
 	
 
