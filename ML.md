@@ -69,7 +69,8 @@ batch size比较大时候，运算比较快，因为并行计算。设置过大�
 把activation function改换为ReLU，可以解决  
 ReLU可以视为是Maxout的一种特例
 - adaptive learning rate  
-在deep learning中同一方向的learning rate也应该快速变动，应用RMSProp
+在deep learning中同一方向的learning rate也应该快速变动，应用RMSProp，其中![equation](http://latex.codecogs.com/gif.latex?$\alpha$)是手调的参数  
+![a](http://or2urvelu.bkt.clouddn.com/L9-1.png)  
 - 比较大的network，参数越多，出现local minima的几率越小  
 - 处理local minima，以及plateau的问题，引入momentum，每一次移动时，要考虑前一次的方向  
 每一次计算的动量，其实是之前所有gradient的总和  
@@ -77,6 +78,8 @@ ReLU可以视为是Maxout的一种特例
 - Early Stopping  在validation set的loss最小时，让training停下来  
 - 使用L2的regularization在update参数会使weight减小，所以叫weight decay  
 使用L1同样会weight减小，但是结果得到的参数有大有小，L2得到的平均比较小  
+- Dropout，每个neuron都有p几率被dropout  
+在testing的时候不用dropout，但是要乘相应的dropout率
 
 
 
