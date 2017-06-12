@@ -4,7 +4,7 @@
 2. Step 2 判断function的好坏   
     - 应用Loss Function  
 3. Step 3 选择Best Function  
-    - Gradient Descent,在凸函数中不存在local minimum  
+    - Gradient Descent,在凸函数中不存在local minima  
 
 4. 过拟合  
     - 过拟合产生可以更换合适的模型    
@@ -44,7 +44,7 @@
 - Generative model对比Disciminative model  
 Generative有一个原始模型的假设，Disciminative在数据量大情况下可能表现更好  
 
-### L6 
+### L6 Neural Network  
 - neural network中，所有的weight和bias集合起来是parameter，用![equation](http://latex.codecogs.com/gif.latex?$\theta$)表示
 - 最后一层是Output Layer一般加上softmax
 - 每次的结果都和真实值做cross entropy，然后用Gradient Descent找更好的参数  
@@ -55,7 +55,36 @@ Generative有一个原始模型的假设，Disciminative在数据量大情况下
 ![a](http://or2urvelu.bkt.clouddn.com/L7-1.png)  
 2. Backward Pass  
 ![a](http://or2urvelu.bkt.clouddn.com/L7-2.png)  
-3. 最后把结果相乘得到对该参数的偏导
+3. 最后把结果相乘得到对该参数的偏导 
 	
 ### L8 Keras  
+- batch size是指一个batch中的example数，epoch是指重复的次数，每一次epoch更新参数的次数是batch的个数  
+若batch size为1，转化成stochastic gradient descent  
+batch size比较大时候，运算比较快，因为并行计算。设置过大，可能会陷入local minima  
+
+### L9 Tips for training DNN  
+- 如果是在training data上表现不好，应该调整那三个步骤，可以调节learning rate或activation function  
+如果是在testing data上，是过拟合，要考虑dropout、regularization、early stopping等方法  
+- activation function使用sigmoid，在层数较多时导致vanishing gradient  
+把activation function改换为ReLU，可以解决  
+ReLU可以视为是Maxout的一种特例
+- adaptive learning rate  
+在deep learning中同一方向的learning rate也应该快速变动，应用RMSProp
+- 比较大的network，参数越多，出现local minima的几率越小  
+- 处理local minima，以及plateau的问题，引入momentum，每一次移动时，要考虑前一次的方向  
+每一次计算的动量，其实是之前所有gradient的总和  
+- Adam，RMSProp+Momentum  
+- Early Stopping  在validation set的loss最小时，让training停下来  
+- 使用L2的regularization在update参数会使weight减小，所以叫weight decay  
+使用L1同样会weight减小，但是结果得到的参数有大有小，L2得到的平均比较小  
+
+
+
+### L10 CNN  
+- convolution  矩阵和filter做多次内积  
+卷积类似于神经网络，相当于用了较少的parameter，用了相同的weight  
+做卷积时，有几个filter就会几个feature map  
+- max pooling  在矩阵中的每个小矩阵中取最大值，组成新矩阵  
+
+
 
