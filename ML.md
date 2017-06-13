@@ -89,5 +89,10 @@ ReLU可以视为是Maxout的一种特例
 做卷积时，有几个filter就会几个feature map  
 - max pooling  在矩阵中的每个小矩阵中取最大值，组成新矩阵  
 
+### L11 Why Deep  
+- 在同等数量参数的情况下，deep的效果可能更好，或在更少数据量的情况下，表现的好  
+
+### L12 Semi-supervised  
+
 
 
