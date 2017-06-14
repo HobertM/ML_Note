@@ -81,8 +81,6 @@ ReLU可以视为是Maxout的一种特例
 - Dropout，每个neuron都有p几率被dropout  
 在testing的时候不用dropout，但是要乘相应的dropout率
 
-
-
 ### L10 CNN  
 - convolution  矩阵和filter做多次内积  
 卷积类似于神经网络，相当于用了较少的parameter，用了相同的weight  
@@ -93,6 +91,27 @@ ReLU可以视为是Maxout的一种特例
 - 在同等数量参数的情况下，deep的效果可能更好，或在更少数据量的情况下，表现的好  
 
 ### L12 Semi-supervised  
+- Semi supervised learning，unlabeled data的数量远大于labeled data的数量  
+Generative Model，初始值会影响结果，具体做法见下图
+![a](http://or2urvelu.bkt.clouddn.com/L12-1.png)  
+- Low density Separation 非黑即白  
+Self training 把一些unlabeled data加入到labeled data中，属于哪个类别的几率大，就设它属于该类  
+Entropy based Regularization，unlabeled data的entropy越小越好  
+- Smoothness Assumption 近朱者赤  
+Cluster and then Label  
+Graph based Approach  
+K Nearest Neighbor，Loss function 中要加上平滑项。  
+- Better Representation (latent factors)化繁为简  
+
+### L13 Unsupervised Learning - Linear Method  
+- 化繁为简 Clustering & Dimension;无中生有 Generation  
+- Cluster k-means & HAC  
+- Dimension Reduction PCA  PCA的w组成一个orthogonal matrix，w相互正交  
+w1是对应S最大特征值的特征向量  w2对应第二大特征值的特征向量  
+z=Wx,z的协方差矩阵是对角阵，以上证明在视频  
+
+
+
 
 
 
