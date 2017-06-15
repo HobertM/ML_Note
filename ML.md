@@ -120,11 +120,21 @@ z=Wx，z的协方差矩阵是对角阵(diagonal)，做PCA可以使维度间去�
 计算principle components，计算特征值的占的比例，特别小的就去除  
 - 矩阵分解
 非负矩阵分解NMF，找出的component会更清楚  
-推荐系统经常用到matrix facorization  
+推荐系统经常用到matrix facorization，类似于买手办  
 文章的主题可以用latent factor表示，方法可以有PLSA，LDA等  
 
 
 ### L14 Unsupervised Learning - Word Embedding  
+- 1 of N Encoding 共多少词就用多少维  
+- Word Embedding 每一个词用一个向量表示  
+- Prediction based 输入1 of N Encoding，输出预测后面出现的词  
+在训练时要保证参数初始化值相同，更新大小也相同  
+- word2vec Tomas Mikolov，用的不是deep的model  
+柏林-罗马+意大利可能得到德国的vector  
+通过bag-of-word获取文章的vector，有监督和无监督的方法  
+
+### L15  
+
 
 
 
