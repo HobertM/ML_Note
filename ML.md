@@ -100,15 +100,31 @@ Entropy based Regularization，unlabeled data的entropy越小越好
 - Smoothness Assumption 近朱者赤  
 Cluster and then Label  
 Graph based Approach  
-K Nearest Neighbor，Loss function 中要加上平滑项。  
+K Nearest Neighbor，Loss function 中要加上平滑项  
 - Better Representation (latent factors)化繁为简  
 
 ### L13 Unsupervised Learning - Linear Method  
-- 化繁为简 Clustering & Dimension;无中生有 Generation  
+- 化繁为简 Clustering & Dimension；无中生有 Generation  
 - Cluster k-means & HAC  
-- Dimension Reduction PCA  PCA的w组成一个orthogonal matrix，w相互正交  
-w1是对应S最大特征值的特征向量  w2对应第二大特征值的特征向量  
-z=Wx,z的协方差矩阵是对角阵，以上证明在视频  
+- Dimension Reduction   PCA  
+PCA的w是方向变化的向量，w组成一个orthogonal matrix，w相互正交  
+S是x的covariance matrix  
+w1是对应S最大特征值的特征向量，w2对应第二大特征值的特征向量，以此类推  
+z=Wx，z的协方差矩阵是对角阵(diagonal)，做PCA可以使维度间去相关，以上证明在视频   
+- 用component代替pixel表示图片，把X做SVD得到的U中的column也是w  
+- PCA还可以看做神经网络，输入输出越接近越好，等同Autoencoder  
+用神经网络train得到的w不一定垂直，和PCA结果不一样  
+- Weakness of PCA  
+可能导致两类混合在一起，对于非线性的可能无效  
+- PCA应用  手写数字 人脸识别  
+计算principle components，计算特征值的占的比例，特别小的就去除  
+- 矩阵分解
+非负矩阵分解NMF，找出的component会更清楚  
+推荐系统经常用到matrix facorization  
+文章的主题可以用latent factor表示，方法可以有PLSA，LDA等  
+
+
+### L14 Unsupervised Learning - Word Embedding  
 
 
 
