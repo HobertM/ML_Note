@@ -142,7 +142,7 @@ z=Wx，z的协方差矩阵是对角阵(diagonal)，做PCA可以使维度间去�
 - t-SNE  
 让两个分布越接近越好，用KL，求解z用gradient descent  
 先用PCA降维计算会比较快  
-![a](http://or2urvelu.bkt.clouddn.com/L15-2.png) 
+![a](http://or2urvelu.bkt.clouddn.com/L15-2.png)  
 相似度的计算见下图   
 原来相距较远的，变换后拉得更远  
 ![a](http://or2urvelu.bkt.clouddn.com/L15-3.png)  
